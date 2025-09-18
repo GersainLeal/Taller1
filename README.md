@@ -1,16 +1,38 @@
-# taller
+# Taller: navegación con go_router, widgets y ciclo de vida
 
-A new Flutter project.
+## URL del repositorio
+(poner aquí la URL pública del repo)
 
-## Getting Started
+## Arquitectura / Rutas
+Rutas definidas (GoRouter):
+- `/` (home) — HomeScreen con GridView y botones para `go`, `push`, `replace`.
+- `/detail/:message` — DetailScreen (muestra parámetro `message`).
+- `/tabs` — TabsScreen (TabBar con Grid, ThirdWidget y Info).
 
-This project is a starting point for a Flutter application.
+Parámetros: se pasa `message` por la ruta (`/detail/<message>`). Se codifica con `Uri.encodeComponent(...)` y se decodifica en el destino.
 
-A few resources to get you started if this is your first Flutter project:
+## Widgets usados y porqué
+- **GridView**: para mostrar rápido una colección en forma de grid (requisito).
+- **TabBar / TabBarView**: para secciones separadas en una pantalla (requisito).
+- **ExpansionPanelList**: tercer widget elegido por interacción y para demostrar estados & `setState()`.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Ciclo de vida evidencia
+Se registra en consola el output de:
+- `initState()` — inicialización de variables y controladores.
+- `didChangeDependencies()` — re-sincronización cuando cambian dependencias.
+- `build()` — renderizado.
+- `setState()` — actualización de `counter`.
+- `dispose()` — liberación de controladores.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+(Adjuntar capturas de la consola en el PDF.)
+
+## Flujo GitFlow
+1. Desde `dev`: `git checkout -b feature/taller_paso_parametros`
+2. Trabajar y commitear.
+3. Hacer PR desde `feature/taller_paso_parametros` → `dev`.
+4. Tras revisión: merge a `dev`. Integrar `dev` a `main` y push.
+5. Incluir la URL de dev/main en Moodle.
+
+## Notas
+- Versión de `go_router` usada: X.X.X (indicar la versión en `pubspec.lock`).
+- Probar comportamientos de `go`, `push` y `replace` con el botón físico “atrás” y con el `AppBar` para evidenciar la diferencia.
