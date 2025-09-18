@@ -1,5 +1,5 @@
 name: taller
-description: Taller - navegación con go_router y ciclo de vida
+description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -30,7 +30,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  go_router: ^14.2.0   # o la versión más reciente
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -48,9 +51,9 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+ 
   assets:
     - assets/logo.png
-
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
