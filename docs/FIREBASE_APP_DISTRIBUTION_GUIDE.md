@@ -21,18 +21,21 @@
 
 ## 3. Configurar App Distribution → Testers & Groups
 
-1. En el menú lateral, ve a **Release & Monitor** > **App Distribution**.
-2. Clic en **Testers & Groups**.
-3. **Crear grupo**:
-   - Clic en **New Group** (o similar).
+1. En el **menú lateral izquierdo** de Firebase Console, busca la sección **"Ejecución"** (segunda sección).
+2. Haz clic en **"App Distribution"** (es la tercera opción bajo "Ejecución", justo después de "A/B Testing" y "AdMob").
+3. Una vez dentro de App Distribution, verás pestañas en la parte superior.
+4. Haz clic en la pestaña **"Testers & Groups"** (o "Evaluadores y grupos").
+5. **Crear grupo**:
+   - Clic en **"New Group"** o **"Crear grupo"**.
    - Nombre del grupo: `QA_Clase`.
-   - Clic en **Add testers** e ingresa el correo: `dduran@uceva.edu.co`.
+   - Clic en **"Add testers"** o **"Agregar evaluadores"** e ingresa el correo: `dduran@uceva.edu.co`.
    - Confirmar y guardar el grupo.
 
 ## 4. Subir el APK (Release)
 
-1. En **App Distribution** > **Releases**, clic en **Distribute a release**.
-2. **Drag and drop** o selecciona tu APK:
+1. En **App Distribution**, busca la pestaña **"Releases"** (en la parte superior).
+2. Clic en **"Distribute a release"** o **"Nueva versión"**.
+3. **Drag and drop** o selecciona tu APK:
    - Ruta: `build/app/outputs/flutter-apk/app-release.apk`.
 3. **Release notes** (ejemplo):
    ```
