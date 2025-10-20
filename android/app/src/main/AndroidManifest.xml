@@ -1,4 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Network access permission for API calls, logging, and Flutter DevTools (if used) -->
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:label="taller"
         android:name="${applicationName}"
